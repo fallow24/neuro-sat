@@ -10,7 +10,7 @@ This is an application for simulating the rotation speed controll of any spacecr
  * Generate sample data, train deep neural networks and save / load them for later use
  * Add precession-disturbance to see if your controller can handle that
  * Compatible with Windows, MacOS and Linux
- * Free, light-weight and not heavy in resources
+ * Free, light-weight and not heavy in computation power
 
 The application is built on top of the [Eigen math library](http://eigen.tuxfamily.org/index.php?title=Main_Page) and the [MiniDNN](https://github.com/yixuan/MiniDNN) library for deep neural networks.  
 However, you wont have to install those header-only libraries for yourself since they're shipped together with the neuro-sat application.
@@ -64,15 +64,15 @@ You might have a massive satellite but only give it tiny wheels. Probably this s
 ### Your first DNN Satellite attitude controller
 
 In the menubar you can find some predefined *Wheel Samples*.
- * Start off with the *4 Wheels* setup, which is a pyramid-like arrangement of the [RSI68-170/60](https://www.rockwellcollins.com/Products-and-Services/Defense/Platforms/Space/High-Motor-Torque-Momentum-and-Reaction-Wheels.aspx) reaction wheel  
- * Construct a *Cubesat* with *mass 400kg* and *length 1m*  
- * Select *Neural network*, then *Train* a new one
- * In the *Sample generator* you have to create some training samples for the DNN to learn from. Create *1000 samples* and save them wherever you like
- * The next step may vary and is highly dependable on which setup you're using. You may find youself playing around with those values to get a good result. For the current setup, *batchsize 50*, *5000 epoches*, *1 hidden layer*, *50 neurons per hidden layer*, *RMSProp optimizer* and *0.0007 learning rate* works perfectly well
+ * Start off with the **4 Wheels** setup, which is a pyramid-like arrangement of the [RSI68-170/60](https://www.rockwellcollins.com/Products-and-Services/Defense/Platforms/Space/High-Motor-Torque-Momentum-and-Reaction-Wheels.aspx) reaction wheel  
+ * Construct a **Cubesat** with **mass 400kg** and **length 1m**  
+ * Select **Neural network**, then **Train** a new one
+ * In the **Sample generator** you have to create some training samples for the DNN to learn from. Create **1000 samples** and save them wherever you like
+ * The next step may vary and is highly dependable on which setup you're using. You may find youself playing around with those values to get a good result. For the current setup, **batchsize 50**, **5000 epoches**, **1 hidden layer**, **50 neurons per hidden layer**, **RMSProp optimizer** and **0.0007 learning rate** works perfectly well
  * Start the training process and wait. The more power your machine has, the fewer time you will have to wait
- * Now you might want to *save* your trained network, so you might *load* it later
- * Add a new command to look at the 3D step-response that your network is able to perform. Keep *speed saturation* in mind! For this setup, speed values between *-0.04* to *0.04* rad/s should work fine
- * *Start the simulation.* Congrats! You (probably) just trained your first spacecraft attitude-controlling neural network
+ * Now you might want to **save** your trained network, so you might **load** it later
+ * Add a new command to look at the 3D step-response that your network is able to perform. Keep *speed saturation* in mind! For this setup, speed values between **-0.04** to **0.04** rad/s should work fine
+ * **Start the simulation.** Congrats! You (probably) just trained your first spacecraft attitude-controlling neural network
 
 ### Keep in mind
 
