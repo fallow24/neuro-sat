@@ -8,7 +8,7 @@ This is an application for simulating the rotation speed controll of any spacecr
 
  * Simulate any 3D spacecraft given its inertia and reaction wheels
  * Generate sample data, train deep neural networks and save / load them for later use
- * Add precession-disturbance to see if your controller can handle that
+ * Add simple precession-disturbance to see if your controller can handle that
  * Compatible with Windows, MacOS and Linux
  * Free, light-weight and not heavy in computation power
 
