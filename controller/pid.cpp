@@ -42,9 +42,9 @@ double * PID::controll(Satellite* sat, Vector3d des_w, Vector3d w, double t)
         Vector3d dErr = (des_w - lastSetpoint) * (1.0 / dt) - (err - lastErr) * (1.0 / dt);
 
         //Calc u = P (err + I * S err dt + D * derr / dt)
-        ux = Kp * err.x() + Sx - Kd * dErr.x();
-        uy = Kp * err.y() + Sy - Kd * dErr.y();
-        uz = Kp * err.z() + Sz - Kd * dErr.z();
+        ux = Kp * err.x() + Sx + Kd * dErr.x();
+        uy = Kp * err.y() + Sy + Kd * dErr.y();
+        uz = Kp * err.z() + Sz + Kd * dErr.z();
         //adjusting output to the bounds
         if (ux < -BOUND) ux = -BOUND; if(BOUND < ux) ux = BOUND;
         if (uy < -BOUND) uy = -BOUND; if(BOUND < uy) uy = BOUND;

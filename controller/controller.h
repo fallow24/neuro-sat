@@ -3,7 +3,7 @@
 
 #include "satellite/satellite.h"
 
-#define SAMPLE_TIME 0.5
+#define SAMPLE_TIME 0.01
 
 class Controller
 {

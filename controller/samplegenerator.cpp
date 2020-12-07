@@ -55,9 +55,9 @@ vector<Sample> SampleGenerator::generate(int nSamples)
 
         //30 Percent of the data should be only 1 axis
         if (n >= 10) {
-            if ((n - 1) % (int)(n / 10) == 0) { ux = 0; uy = 0; }
-            else if (n % (int)(n / 10) == 0)     { uy = 0; uz = 0; }
-            else if ((n + 1) % (int)(n / 10) == 0) { uz = 0; ux = 0; }
+            if ((n - 1) % (int)(n / 10) == 0)       { ux = 0; uy = 0; }
+            else if (n % (int)(n / 10) == 0)        { uy = 0; uz = 0; }
+            else if ((n + 1) % (int)(n / 10) == 0)  { uz = 0; ux = 0; }
         }
 
         Vector3d u(ux, uy, uz);

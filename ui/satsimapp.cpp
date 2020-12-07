@@ -218,8 +218,6 @@ void SatSimApp::on_removeCmd_clicked()
     ui->cmdComboBox->removeItem(ui->cmdComboBox->currentIndex());
 }
 
-
-
 void SatSimApp::on_exportDat_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this, tr("Export result of simulation"), "", tr("Data files (*.dat);;All Files (*)"));
